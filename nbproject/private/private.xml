@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Users/vasovourka/NetBeansProjects/viewFiles/src/controllers/ActionEnum.java</file>
+            <file>file:/Users/vasovourka/NetBeansProjects/viewFiles/src/commands/UndoCopyCom.java</file>
+            <file>file:/Users/vasovourka/NetBeansProjects/viewFiles/src/commands/CutCommand.java</file>
+            <file>file:/Users/vasovourka/NetBeansProjects/viewFiles/src/controllers/StackCommand.java</file>
+            <file>file:/Users/vasovourka/NetBeansProjects/viewFiles/src/smartFolder/smartFolderForm.java</file>
+            <file>file:/Users/vasovourka/NetBeansProjects/viewFiles/src/controllers/RenameController.java</file>
+            <file>file:/Users/vasovourka/NetBeansProjects/viewFiles/src/controllers/ActionController.java</file>
+            <file>file:/Users/vasovourka/NetBeansProjects/viewFiles/src/viewFiles/SelectedCell.java</file>
+            <file>file:/Users/vasovourka/NetBeansProjects/viewFiles/src/controllers/ItemPasteActionController.java</file>
+            <file>file:/Users/vasovourka/NetBeansProjects/viewFiles/src/viewFiles/InputPopUps.java</file>
+            <file>file:/Users/vasovourka/NetBeansProjects/viewFiles/src/smartFolder/TableFacade.java</file>
+            <file>file:/Users/vasovourka/NetBeansProjects/viewFiles/src/controllers/RedoController.java</file>
+            <file>file:/Users/vasovourka/NetBeansProjects/viewFiles/src/controllers/MoveFileController.java</file>
+            <file>file:/Users/vasovourka/NetBeansProjects/viewFiles/src/smartFolder/ViewFilesController.java</file>
+            <file>file:/Users/vasovourka/NetBeansProjects/viewFiles/src/controllers/CopyFileController.java</file>
+            <file>file:/Users/vasovourka/NetBeansProjects/viewFiles/src/commands/Command.java</file>
+            <file>file:/Users/vasovourka/NetBeansProjects/viewFiles/src/viewFiles/ViewFacade.java</file>
+            <file>file:/Users/vasovourka/NetBeansProjects/viewFiles/src/viewFiles/viewFilesForm.java</file>
+            <file>file:/Users/vasovourka/NetBeansProjects/viewFiles/src/commands/PasteCommand.java</file>
+            <file>file:/Users/vasovourka/NetBeansProjects/viewFiles/src/commands/RenameCommand.java</file>
+            <file>file:/Users/vasovourka/NetBeansProjects/viewFiles/src/smartFolder/secondComboSearch.java</file>
+            <file>file:/Users/vasovourka/NetBeansProjects/viewFiles/src/commands/CopyCommand.java</file>
+        </group>
+    </open-files>
+</project-private>
