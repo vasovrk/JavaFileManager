@@ -37,6 +37,8 @@ public class viewFilesForm extends javax.swing.JFrame {
     Stack<Command> stUndo;
     Stack<Command> stRedo;
     
+    
+    
     //treeCreations
     /**
      * Creates new form viewFilesForm1
