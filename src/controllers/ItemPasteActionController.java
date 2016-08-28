@@ -42,7 +42,7 @@ public class ItemPasteActionController {
         System.out.println("to name einahsdfhskj:" + command.getName());
         System.out.println("to dest path einaiiiii:" + dest);
         System.out.println("to source path einaiiii" + command.getSource());
-        res=ActionController.action(command, dest);
+        res = ActionController.action(command, dest);
         return res;
     }
 

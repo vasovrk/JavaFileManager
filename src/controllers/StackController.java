@@ -23,7 +23,7 @@ public class StackController {
         System.out.println("sourcepath:" + newComPaste.getSource());
         Command newComCut = (Command) stUndo.pop();
         System.out.println("destpath:" + newComCut.getSource());
-        controllers.MoveFileController.move(newComPaste.getSource(), newComCut.getSource());
+//        controllers.MoveFileController.move(newComPaste.getSource(), newComCut.getSource());
         //System.out.println(stUndo);
         stRedo.push(newComPaste);
         stRedo.push(newComCut);
@@ -33,7 +33,7 @@ public class StackController {
     public static Stack redoCut(Stack<Command> stUndo, Stack<Command> stRedo) {
         Command newComCut = stRedo.pop();
         Command newComPaste = stRedo.pop();
-        controllers.MoveFileController.move(newComCut.getSource(), newComPaste.getSource());
+//        controllers.MoveFileController.move(newComCut.getSource(), newComPaste.getSource());
         stUndo.push(newComCut);
         stUndo.push(newComPaste);
         return stRedo;
@@ -45,7 +45,7 @@ public class StackController {
         Command newComCopy = stUndo.pop();
         System.out.println("destpath:" + newComCopy.getSource());
         File file = new File(newComPaste.getSource());
-        controllers.MoveFileController.move(newComPaste.getSource(), newComCopy.getSource());
+//        controllers.MoveFileController.move(newComPaste.getSource(), newComCopy.getSource());
         //delete(file);
         stRedo.push(newComPaste);
         stRedo.push(newComCopy);

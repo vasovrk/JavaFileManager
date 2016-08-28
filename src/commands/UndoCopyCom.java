@@ -56,7 +56,7 @@ public class UndoCopyCom implements ICommand {
         ICommand newComCopy = stUndo.pop();
         System.out.println("destpath:" + newComCopy.getSource());
         //File file = new File(newComPaste.getSource());
-        controllers.MoveFileController.move(newComPaste.getSource(), newComCopy.getSource());
+//        controllers.MoveFileController.move(newComPaste.getSource(), newComCopy.getSource());
         //delete(file);
         stRedo.push(newComPaste);
         stRedo.push(newComCopy);

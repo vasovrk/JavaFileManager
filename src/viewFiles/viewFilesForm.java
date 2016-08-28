@@ -29,9 +29,6 @@ import javax.swing.tree.DefaultMutableTreeNode;
 public class viewFilesForm extends javax.swing.JFrame {
     String userHome = System.getProperty( "user.home" );
     final File folder = new File("/Users/vasovourka/NetBeansProjects");
-    //private Command command;
-    public Command command;
-  //  public String path;
     ICommand comm;
     boolean res;
     Stack<Command> stUndo;
@@ -544,30 +541,19 @@ public class viewFilesForm extends javax.swing.JFrame {
     }//GEN-LAST:event_filesTableMouseReleased
 
     private void formMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseReleased
-        // TODO add your handling code here:
-        /* if (evt.isPopupTrigger()) {
-         popUp.show(this, evt.getX(), evt.getY());
-         jPopupMenu1.show(this, evt.getX(), evt.getY());
-         }*/
+
     }//GEN-LAST:event_formMouseReleased
 
     private void cutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cutMenuItemActionPerformed
 
         String name = viewFiles.SelectedCell.selected(filesTable);
         comm = new CutCommand(ActionEnum.CUT, pathText.getText(), name);
-        
-        // controllers.StackCommand.showpush(stUndo, command);
-        
+                
     }//GEN-LAST:event_cutMenuItemActionPerformed
 
     private void pasteMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pasteMenuItemActionPerformed
-//        Command commandPaste = new Command(ActionEnum.PASTE, pathText.getText(), command.getName());
 
-       // PasteCommand pasteDest=new PasteCommand(path,name);
-        
         res=ItemPasteActionController.action(comm, pathText.getText());
-        // controllers.StackCommand.showpush(stUndo, commandPaste);
-       // stUndo.push(commandPaste);
         viewFiles.TableFacade.selectedNode(filesTable, filesTree, pathText);
         filesTree.updateUI();
 
@@ -587,8 +573,6 @@ public class viewFilesForm extends javax.swing.JFrame {
         
         comm = new CopyCommand(ActionEnum.COPY, pathText.getText(), name);
         
-        //  controllers.StackCommand.showpush(stUndo, command);
-      //  stUndo.push(command);
     }//GEN-LAST:event_copyMenuItemActionPerformed
 
     private void createFolderMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createFolderMenuItemActionPerformed
@@ -606,22 +590,10 @@ public class viewFilesForm extends javax.swing.JFrame {
     }//GEN-LAST:event_closeMenuItemActionPerformed
 
     private void pathTextMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pathTextMouseReleased
-        // TODO add your handling code here:
-
-        /*    if (SwingUtilities.isRightMouseButton(evt)) {
-         //my code
-         JPopupMenu popup1 = new JPopupMenu();
-         popup1.add("m");
-         popup1.add("n");
-         pathText.add(popup1);
-         }
-         jPopupMenu1.show(this, evt.getX(), evt.getY());*/
-
     }//GEN-LAST:event_pathTextMouseReleased
 
     private void popUpMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_popUpMouseReleased
-        // TODO add your handling code here:
-        // popUp.show(this, evt.getXOnScreen(), evt.getYOnScreen());
+      
 
     }//GEN-LAST:event_popUpMouseReleased
 
@@ -638,39 +610,23 @@ public class viewFilesForm extends javax.swing.JFrame {
         comm = new RenameCommand(ActionEnum.RENAME, pathText.getText());
         RenameController.inputName(comm, pathText.getText(), oldName);
         viewFiles.TableFacade.selectedNode(filesTable, filesTree, pathText);
-//        //boolean res = viewFiles.InputPopUps.inputName(pathText.getText(), oldName);
-//        if (res) {
-//            System.out.println("to rename egine");
-//            viewFiles.TableFacade.selectedNode(filesTable, filesTree, pathText);
-//            /*    filesTable = DefaultJtable.defaultJtable(filesTable);
-//             ViewFilesController controller = new ViewFilesController();
-//             controller.listFilesFolder(file, filesTable, filesTree);*/
-//        }
+   
 
     }//GEN-LAST:event_renameMenuitemActionPerformed
 
     private void redoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_redoButtonActionPerformed
-        // TODO add your handling code here:
-        /*stRedo = controllers.StackController.redoCut(stUndo, stRedo);
-        System.out.println("kainourgia lista redo:" + stRedo);
-        if (!stUndo.isEmpty()) {
-        undoButton.setEnabled(true);
-        System.out.println("undostack empty!!!");
-        }*/
+       
         controllers.RedoController.redo(comm);
         viewFiles.TableFacade.selectedNode(filesTable, filesTree, pathText);
     }//GEN-LAST:event_redoButtonActionPerformed
 
     private void undoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_undoButtonActionPerformed
-//        // TODO add your handling code here:
-//        /*stUndo = controllers.StackController.undoCut(stUndo, stRedo);
-//        System.out.println("kainourgia lista undo:" + stUndo);
+        
         
         if (!res) {
         undoButton.setEnabled(false);
         System.out.println("undostack empty!!!");
         }
-//        controllers.UndoController.undo(comm);
         viewFiles.TableFacade.selectedNode(filesTable, filesTree, pathText);
     }//GEN-LAST:event_undoButtonActionPerformed
 
@@ -691,8 +647,7 @@ public class viewFilesForm extends javax.swing.JFrame {
 
         File treeSelected = new File(evt.getPath().getLastPathComponent().toString());
         DefaultMutableTreeNode parent = new DefaultMutableTreeNode(treeSelected);
-       // controllers.TreeController.treeInit(parent, treeSelected);
-        //  controllers.TreeController.treeCreation(filesTree, treeSelected);
+
         controllers.TreeController.treeSub(parent, folder);
 
     }//GEN-LAST:event_filesTreeTreeExpanded

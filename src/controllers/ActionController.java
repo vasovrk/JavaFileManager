@@ -35,29 +35,9 @@ public class ActionController {
 
     public static boolean action(ICommand command, String dest) {
         boolean res = true;
-        /*System.out.println("to source path einaiiiii:\n" + command.getSource());
-         System.out.println("to command einai : " + command.getType());*/
+
         command.perform();
         commandsPerformed.push(command);
-//        return true;
-////        System.out.println("to  commandsUndone einaiiii:" + commandsUndone.toString());
-////
-////        
-////        boolean res = false;
-//       switch (command.getType()) {
-//           case CUT:
-////                System.out.println("katalogos move" + dest);
-////                controllers.MoveFileController.move(command.getSource(), dest);
-////                res = true;
-//                break;
-//            case COPY:
-//
-//                System.out.println("katalogos copy" + dest);
-//               // controllers.CopyFileController.copy1(command.getSource() , dest);
-//                /*  ICommand copy=new CopyCommand(command.getSource(),dest);
-//                 copy.perform();*/
-//                break;
-//        }
         if (commandsPerformed.isEmpty()) {
             res = false;
 
